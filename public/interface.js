@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-  // PLAYER_TOKEN = "X"
+var game = new Game()
 
 $('.box').click(function() {
-  $(this).html("X");
+  $(this).html(game.turn);
+  game.takeTurn();
 })
 
 $('#restart').on('click', function() {
-  console.log("It works");
 })
 
 });
