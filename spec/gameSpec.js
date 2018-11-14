@@ -16,4 +16,9 @@ describe ("Game" , function() {
     expect(game.turn).toBe("X")
   });
 
+  it("Resets the game to the starting values", function() {
+    game.resetGame()
+    expect(game.turn).toBe("X")
+  })
+
 })

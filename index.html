@@ -7,30 +7,28 @@
 
 <body>
   <h1>Tic-Tac-Toe</h1>
-
-  <table>
+  <table id="board">
     <tr>
-      <th class="box"></th>
-      <th class="box"></th>
-      <th class="box"></th>
+      <th class="box" id="row1_box1"></th>
+      <th class="box" id="row1_box2"></th>
+      <th class="box" id="row1_box3"></th>
     </tr>
     <tr>
-      <th class="box"></th>
-      <th class="box"></th>
-      <th class="box"></th>
+      <th class="box" id="row2_box1"></th>
+      <th class="box" id="row2_box2"></th>
+      <th class="box" id="row2_box3"></th>
     </tr>
     <tr>
-      <th class="box"></th>
-      <th class="box"></th>
-      <th class="box"></th>
+      <th class="box" id="row3_box1"></th>
+      <th class="box" id="row3_box2"></th>
+      <th class="box" id="row3_box3"></th>
     </tr>
   </table>
 
-  <button id="restart">Restart</button>
+  <button>Restart</button>
 
-  <script src="app.js"></script>
+  <script src="./public/gameBoard.js"></script>
   <script src="./public/game.js"></script>
   <script src="./public/jquery-3.3.1.js"></script>
   <script src="./public/interface.js"></script>
-
 </body>
