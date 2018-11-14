@@ -1,0 +1,18 @@
+body {
+
+}
+
+th {
+    border-style: solid;
+    padding: 50px;
+    text-align: center;
+}
+
+table {
+  border-spacing: 5px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
