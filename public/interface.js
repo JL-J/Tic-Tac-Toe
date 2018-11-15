@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   var logic = new GameLogic();
+  var game = new Game();
   var board = new GameBoard(logic);
-  var game = new Game(board);
 
 $('.box').click(function() {
   try {
@@ -19,7 +19,7 @@ $('button').on('click', function() {
 })
 
 function registerNewMove(move, area) {
-  board.addMove(move);
+  board.newMove(move);
   $(area).html(game.turn);
   game.takeTurn();
 }

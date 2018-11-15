@@ -1,8 +1,7 @@
-function Game(board = new GameBoard()) {
+function Game() {
   PLAYER_ONE_TOKEN = "X"
   PLAYER_TWO_TOKEN = "O"
   this.turn = PLAYER_ONE_TOKEN
-  this.board = board
 };
 
 Game.prototype.takeTurn = function() {
