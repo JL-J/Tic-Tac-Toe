@@ -1,12 +1,14 @@
-function GameBoard() {
+function GameBoard(logic = new GameLogic()) {
   this.takenMoves = []
+  this.logic = logic
 }
 
 GameBoard.prototype.addMove = function(move) {
   if (this._isMoveTaken(move)) {
-    throw "Error";
+    throw "This box is already taken";
   } else {
     this.takenMoves.push(move);
+    this.logic._increaseTurns();
   }
 }
 
