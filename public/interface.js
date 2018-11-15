@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var logic = new GameLogic();
   var game = new Game();
-  var board = new GameBoard(logic);
+  var board = new GameBoard();
 
 $('.box').click(function() {
   try {

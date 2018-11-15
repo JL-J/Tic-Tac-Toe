@@ -4,6 +4,7 @@ function GameLogic() {
 }
 
 GameLogic.prototype.outcome = function() {
+  this._increaseTurns();
   if (this.isEndGame()) {
     return 'Draw';
   } else {

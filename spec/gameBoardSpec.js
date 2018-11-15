@@ -23,7 +23,6 @@ describe ("GameBoard", function() {
   });
 
   it("It will not allow a move already played to be added to the record", function() {
-    console.log(board._isMoveTaken("row2_box1"))
     expect(function() {board.newMove("row2_box1");}).toThrow("This box is already taken")
   });
 

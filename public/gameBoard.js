@@ -1,7 +1,6 @@
-function GameBoard(logic = new GameLogic()) {
+function GameBoard() {
   this.xMoves = []
   this.oMoves = []
-  this.logic = logic
 }
 
 GameBoard.prototype.newMove = function(move) {
@@ -9,7 +8,6 @@ GameBoard.prototype.newMove = function(move) {
     throw "This box is already taken";
   } else {
     this.addMove(move);
-    this.logic._increaseTurns();
   }
 }
 
