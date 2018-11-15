@@ -18,7 +18,7 @@ describe ("GameBoard", function() {
   });
 
   it("It will not allow a move already played to be added to the record", function() {
-    expect(function() {board.addMove("row2_box1");}).toThrow("Error")
+    expect(function() {board.addMove("row2_box1");}).toThrow("This box is already taken")
   });
 
   it("Resets the game to the starting values", function() {

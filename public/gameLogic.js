@@ -18,3 +18,7 @@ GameLogic.prototype.isEndGame = function() {
 GameLogic.prototype._increaseTurns = function() {
   this.numberOfTurns ++;
 }
+
+GameLogic.prototype.resetLogic = function() {
+  this.numberOfTurns = this.STARTING_NUMBER
+}

@@ -6,10 +6,8 @@ $(document).ready(function() {
 
 $('.box').click(function() {
   try {
-    $('#error').text("");
-    board.addMove(this.id);
-    $(this).html(game.turn);
-    game.takeTurn();
+    clearMessages();
+    registerNewMove(this.id, this);
     gameOutcome();
   } catch (error) {
     $('#error').text(error);
@@ -17,10 +15,19 @@ $('.box').click(function() {
 })
 
 $('button').on('click', function() {
-  $('.box').text("");
-  board.resetBoard();
-  game.resetGame();
+  restart();
 })
+
+function registerNewMove(move, area) {
+  board.addMove(move);
+  $(area).html(game.turn);
+  game.takeTurn();
+}
+
+function clearMessages() {
+  $('#error').text("");
+  $('#outcome').text("");
+}
 
 function gameOutcome() {
   switch(logic.outcome()) {
@@ -29,6 +36,14 @@ function gameOutcome() {
     case "Continue":
       // Do nothing
   }
+}
+
+function restart() {
+  $('.box').text("");
+  clearMessages();
+  board.resetBoard();
+  game.resetGame();
+  logic.resetLogic();
 }
 
 });

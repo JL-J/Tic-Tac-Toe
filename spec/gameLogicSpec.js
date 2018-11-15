@@ -9,4 +9,9 @@ describe ("GameLogic", function() {
     expect(logic.outcome()).toBe('Draw')
   })
 
+  it("Should reset the number of turns to 0", function() {
+    logic.resetLogic();
+    expect(logic.numberOfTurns).toEqual(0);
+  })
+
 })
